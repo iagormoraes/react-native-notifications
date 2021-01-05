@@ -30,4 +30,17 @@ export class Notification {
   get thread(): string {
     return this.payload.thread;
   }
+
+  // Android O and higher only below
+  get importance(): number {
+    return this.payload.importance;
+  }
+
+  get channelName(): string {
+    return this.payload.channelName;
+  }
+
+  get channelId(): string {
+    return this.payload.channelId;
+  }
 }

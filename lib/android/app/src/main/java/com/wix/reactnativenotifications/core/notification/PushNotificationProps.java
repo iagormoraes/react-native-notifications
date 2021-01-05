@@ -18,6 +18,13 @@ public class PushNotificationProps {
         return getBundleStringFirstNotNull("gcm.notification.body", "body");
     }
 
+    // Android O properties
+    public String getChannelId() { return mBundle.getString("channelId", "channel_01"); }
+
+    public String getChannelName() { return mBundle.getString("channelName", "Channel Name"); }
+
+    public int getImportance() { return mBundle.getInt("importance", 3); }
+
     public Bundle asBundle() {
         return (Bundle) mBundle.clone();
     }
